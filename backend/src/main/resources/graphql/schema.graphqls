@@ -1,0 +1,15 @@
+type Query {
+	allFolders: [FolderDto!]!
+}
+
+type Mutation {
+	addFolder(name: String!): FolderDto!
+}
+
+type FolderDto {
+	id: ID!,
+	name: String!,
+	linkCount: Int!,
+	createdAt: String!,
+	updatedAt: String!,
+}
