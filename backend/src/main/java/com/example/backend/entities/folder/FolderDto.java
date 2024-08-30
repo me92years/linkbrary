@@ -19,12 +19,9 @@ public class FolderDto {
   private LocalDateTime modifiedAt;
 
   public static FolderDto from(Folder entity) {
-    return FolderDto.builder().id(entity.getId())
-        .name(entity.getName())
-        .linkCount(entity.getLinkCount())
-        .createdAt(entity.getCreatedAt())
-        .modifiedAt(entity.getModifiedAt())
-        .build();
+    return FolderDto.builder().id(entity.getId()).name(entity.getName())
+        .linkCount(entity.getLinkCount()).createdAt(entity.getCreatedAt())
+        .modifiedAt(entity.getModifiedAt()).build();
   }
 
 }

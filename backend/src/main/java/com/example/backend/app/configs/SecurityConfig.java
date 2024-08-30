@@ -15,7 +15,8 @@ public class SecurityConfig {
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http.headers(headers -> headers.frameOptions(frameOption -> frameOption.disable()))
-        .csrf(csrf -> csrf.disable()).formLogin(formLogin -> formLogin.disable())
+        .csrf(csrf -> csrf.disable())
+        .formLogin(formLogin -> formLogin.disable())
         .httpBasic(httpBasic -> httpBasic.disable())
         .authorizeHttpRequests(request -> request.anyRequest().permitAll());
 

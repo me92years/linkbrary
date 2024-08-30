@@ -1,9 +1,12 @@
 type Query {
 	allFolders: [FolderDto!]!
+	getFolder(id: ID!): FolderDto!
 }
 
 type Mutation {
 	addFolder(name: String!): FolderDto!
+	delFolder(id: ID!): MessageResponse!
+	modFolder(id: ID!, name: String!): FolderDto!
 }
 
 type FolderDto {
@@ -12,4 +15,8 @@ type FolderDto {
 	linkCount: Int!,
 	createdAt: String!,
 	updatedAt: String!,
+}
+
+type MessageResponse {
+	message: String!
 }
