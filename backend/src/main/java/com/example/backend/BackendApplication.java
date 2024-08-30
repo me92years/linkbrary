@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 @EnableJpaAuditing
 public class BackendApplication {
-
+  
+    // 푸시 1
 	public static void main(String[] args) {
 		SpringApplication.run(BackendApplication.class, args);
 	}
